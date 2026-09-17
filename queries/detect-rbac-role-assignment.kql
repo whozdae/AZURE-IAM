@@ -1,0 +1,18 @@
+// Detect new Azure RBAC role assignments
+// Table:   AzureActivity (subscription Activity Log -> Log Analytics / Microsoft Sentinel)
+// MITRE:   T1098.003 - Account Manipulation: Additional Cloud Roles
+// Status:  Written for this project; not yet validated against live Sentinel data
+let lookback = 7d;
+AzureActivity
+| where TimeGenerated > ago(lookback)
+| where OperationNameValue =~ "MICROSOFT.AUTHORIZATION/ROLEASSIGNMENTS/WRITE"
+| where ActivityStatusValue =~ "Success"
+| extend Req = parse_json(tostring(Properties_d.requestbody))
+| extend RoleDefinitionId = tostring(Req.Properties.RoleDefinitionId),
+         PrincipalId      = tostring(Req.Properties.PrincipalId),
+         PrincipalType    = tostring(Req.Properties.PrincipalType),
+         AssignedScope    = tostring(Req.Properties.Scope)
+| extend RoleGuid = tostring(split(RoleDefinitionId, "/")[-1])
+| project TimeGenerated, Caller, CallerIpAddress, SubscriptionId, ResourceGroup,
+          PrincipalId, PrincipalType, RoleGuid, AssignedScope, CorrelationId
+| sort by TimeGenerated desc

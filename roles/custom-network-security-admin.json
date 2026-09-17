@@ -1,0 +1,18 @@
+{
+  "Name": "Custom Network Security Admin",
+  "IsCustom": true,
+  "Description": "Manage Network Security Groups, VNets, and Firewalls.",
+  "Actions": [
+    "Microsoft.Network/*",
+    "Microsoft.Resources/subscriptions/resourceGroups/read"
+  ],
+  "NotActions": [
+    "Microsoft.Network/expressRouteCircuits/*",
+    "Microsoft.Authorization/*/write"
+  ],
+  "DataActions": [],
+  "NotDataActions": [],
+  "AssignableScopes": [
+    "/subscriptions/<SUBSCRIPTION_ID>"
+  ]
+}

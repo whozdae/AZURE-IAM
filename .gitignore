@@ -1,0 +1,7 @@
+# Live audit reports contain real UPNs and subscription IDs - never commit them
+output/
+*.log
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
