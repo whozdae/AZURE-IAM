@@ -162,4 +162,4 @@ AZURE-IAM/
 
 ---
 
-*Built by **Alex "Dae" Adewoyin**, Cybersecurity Analyst focused on Identity & Access Management (SC-300). All identifiers in this repo are sanitized.*
+*Built by **Alex "Dae" Adewoyin**, Cybersecurity Analyst focused on Identity & Access Management.
