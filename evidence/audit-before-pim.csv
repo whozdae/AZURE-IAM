@@ -1,0 +1,2 @@
+"DisplayName","SignInName","ObjectType","RoleDefinitionName","Scope","HighRiskViolation"
+"Alex Adewoyin","<lab-admin>@<tenant>.onmicrosoft.com","User","Owner","/subscriptions/<SUBSCRIPTION_ID>","True"

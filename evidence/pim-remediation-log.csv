@@ -1,0 +1,7 @@
+"TimestampUtc","Step","Result","Detail"
+"2026-09-23T04:05:21","PIM availability","OK","roleEligibilitySchedules readable at this scope"
+"2026-09-23T04:05:22","Permanent Owners at subscription scope","OK","2 found"
+"2026-09-23T04:05:23","Break-glass check","OK","separate account holds permanent Owner"
+"2026-09-23T04:05:24","Eligible Owner assignment","EXISTS","<lab-admin>@<tenant>.onmicrosoft.com"
+"2026-09-23T04:05:35","Eligible assignment verified","VERIFIED","visible in PIM"
+"2026-09-23T04:09:04","Standing Owner","REMOVED","<lab-admin>@<tenant>.onmicrosoft.com"

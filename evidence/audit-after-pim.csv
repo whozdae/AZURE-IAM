@@ -1,0 +1,4 @@
+DisplayName,SignInName,ObjectType,RoleDefinitionName,Scope,HighRiskViolation
+Elena Rostova,<upn-redacted>,User,Custom Key Vault Secrets Officer,/subscriptions/<SUBSCRIPTION-ID>/resourceGroups/RG-IAMLab-Test,False
+David Chen,<upn-redacted>,User,Custom Network Security Admin,/subscriptions/<SUBSCRIPTION-ID>/resourceGroups/RG-IAMLab-Test,False
+Break Glass Emergency Access,<upn-redacted>,User,Owner,/subscriptions/<SUBSCRIPTION-ID>,True
